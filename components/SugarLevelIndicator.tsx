@@ -10,11 +10,11 @@ type SugarLevelIndicatorProps = {
 const SugarLevelIndicator: React.FC<SugarLevelIndicatorProps> = ({ current, limit, small = false }) => {
   const percentage = Math.min((current / limit) * 100, 100)
 
-  let color = "#4CAF50" // Green for good range
+  let color = "#4CAF50" 
   if (percentage > 100) {
-    color = "#F44336" // Red for over limit
+    color = "#F44336" 
   } else if (percentage < 50) {
-    color = "#FF9800" // Orange for under half of limit
+    color = "#FF9800" 
   }
 
   return (

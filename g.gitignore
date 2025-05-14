@@ -30,7 +30,6 @@ local.properties
 *.key
 *.pem
 
-# Expo (אם רלוונטי)
 .expo/
 .expo-shared/
 
@@ -52,4 +51,3 @@ coverage/
 # Env
 .env
 .env.*
-

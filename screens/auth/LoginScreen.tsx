@@ -13,11 +13,14 @@ import {
   ActivityIndicator,
   Alert,
 } from "react-native"
+import { NavigationProp } from "@react-navigation/native"; 
 import { SafeAreaView } from "react-native-safe-area-context"
 import { useAuth } from "../../contexts/AuthContext"
 import { StatusBar } from "expo-status-bar"
-
-const LoginScreen = ({ navigation }) => {
+type Props = {
+  navigation: NavigationProp<any>; 
+};
+const LoginScreen = ({ navigation}:Props) => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [isLoading, setIsLoading] = useState(false)

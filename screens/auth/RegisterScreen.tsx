@@ -15,10 +15,13 @@ import {
 } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { useAuth } from "../../contexts/AuthContext"
-import { StatusBar } from "expo-status-bar"
 import { Ionicons } from "@expo/vector-icons"
-
-const RegisterScreen = ({ navigation }) => {
+import { StatusBar } from "expo-status-bar"
+import { NavigationProp } from "@react-navigation/native"
+type Props = {
+  navigation: NavigationProp<any>; 
+};
+const RegisterScreen = ({ navigation }:Props) => {
   const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
